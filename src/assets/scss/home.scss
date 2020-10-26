@@ -1,0 +1,148 @@
+// home block 
+.homeBlock {
+    font-size: 12px;
+    color: white;
+    background-color: black;
+    min-width: 1366px;
+    min-height: 768px;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+.homeBlock:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+//home sidebar information
+.brandLogo {
+    display: block;
+    margin-top: 12px;
+    pointer-events: none;
+    user-select: none;
+}
+.hotelName {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    margin-top: 185px;
+    margin-bottom: 16px;
+    max-width: 275px;
+    display: inline-flex;
+    flex-direction: column;
+}
+.hotelInfo {
+    line-height: 17px;
+    text-align: left;
+    margin-top: 6px;
+}
+
+// home container
+.homeContainer {
+    width: 1100px;
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+}
+
+// room Type
+.roomTypeBlock {
+    width: 825px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-shadow: 20px 20px 80px 5px rgba(0,0,0,0.75);
+}
+.room {
+    position: relative;
+}
+.imgWrap {
+    display: block;
+    width: 275px;
+    height: 275px;
+    transition: opacity 300ms ease-in;
+}
+.roomName {
+    display: inline-block;
+    color: transparent;
+    font-family: "Open Sans";
+    font-size: 19px;
+    width: 275px;
+    height: 275px;
+    line-height: 275px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    user-select: none;
+    transition: background-color 150ms ease-in;
+}
+
+.roomName:hover {
+    display: block;
+    color: white;
+    background-color: rgba(56, 71, 11, 0.6);
+}
+
+//footer
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+.bgSelectBlock {
+    margin: 50px 0 0 0;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.designerBlock {
+    font-size: 1px;
+    line-height: 17px;
+    font-family: "Open Sans";
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    bottom: 100px;
+    right: 480px;
+}
+
+    // bg block
+    .bgBlock {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -2;
+    }
+    .bgImg {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+.label {
+    padding: 7px;
+}
+.radio {
+    display: none;
+}
+.radio:checked ~ .circle {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.radio:checked ~ .bgBlock {
+    z-index: -1;
+}
