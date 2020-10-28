@@ -9,8 +9,12 @@ const HomeType = ({rooms}) => {
                 let roomTypeAry = name.split(' ');
                 let linkAddress = '/room/';
                 linkAddress += (roomTypeAry.length>2) ? roomTypeAry[0]+roomTypeAry[1] : roomTypeAry[0];
+                let linkToObj = {
+                    pathname: linkAddress,
+                    state: { roomId: id, roomName: name }
+                };
                 return (
-                    <Link key={id} className='room' to={linkAddress}>
+                    <Link key={id} className='room' to={linkToObj}>
                         <img className='imgWrap' src={imageUrl}></img>
                         <span className='roomName'>{name}</span>
                     </Link>

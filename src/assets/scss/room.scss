@@ -1,0 +1,63 @@
+// room info
+.container {
+    display:flex;
+    color: #38470b;
+}
+// room status
+.roomMain {
+    min-width: 793px;
+    padding: 59px 28px;
+    margin-left: 573px;
+}
+.roomStatusHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.roomStatusName {
+    font-family: "Open Sans";
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 46px;
+    margin-top: 48px;
+}
+.roomDes {
+    font-weight: 500;
+    line-height: 20px;
+}
+.roomRules {
+    margin-top: 38px;
+    line-height: 24px;
+    font-weight: 300;
+    max-height: 68px;
+}
+.roomDetial {
+    list-style-type: disc;
+    margin-top: 35px;
+    margin-left: 21px;
+    line-height: 24px;
+    font-weight: 300;
+    max-height: 94px;
+}
+
+.roomAmenities {
+    min-height: 164px;
+    margin-top: 45px;
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.amenities {
+    flex-basis: 14.28%;
+    pointer-events: none;
+    user-select: none;
+    
+    &.notSupport {
+        opacity: 0.2;
+    }
+}
+
+.amenitiesStatus {
+    vertical-align: top;
+}

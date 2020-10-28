@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/scss/index.scss';
-import axios from 'axios';
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+
+//api
+import {apiGetAllRooms} from '../api'
 
 //page
 import Home from './Home/Home'
+import RoomInfo from './Room/RoomInfo'
 
 function App() {
   const header = {
@@ -12,19 +15,19 @@ function App() {
     authorization: 'Bearer b6zWQKzrk8jw2OPPRAh1Gahua6k3MWRRj5FIBkKpQd6rnHFCM5T0E0HZlVyx'
   }
 
-  const [roomsInfo, setRoomsInfo] = useState();
+  const [roomsInfo, setRoomsInfo] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  useEffect(()=>{    
+  useEffect(()=>{
+    setLoading(true);
     async function getData() {
-      const api = 'https://challenge.thef2e.com/api/thef2e2019/stage6/rooms';
-      const result = await axios(api, {method: 'GET', headers: header});
-      // setRoomsInfo(result.data);
+      const result = await apiGetAllRooms();
       if(result.data.success) {
         setRoomsInfo(result.data.items);
-        setLoading(true);
+        setLoading(false);
       }
     }
+
     getData();
   }, []);
 
@@ -33,22 +36,18 @@ function App() {
     return <Home rooms={roomsInfo} />;
   }
 
-  if(loading) {
-    return (
-      <Router>
-        <div>
-          <Switch>
-            <Route exact path="/" render={renderHome}></Route>
-            <Route path="/about" component={About}></Route>
-          </Switch>
-        </div>
-      </Router>
-    );
-  } else {
-    return (
-      <div>Loading ...</div>
-    );
-  }
+  if(loading) {return (<div>Loading...</div>)};
+
+  return (
+    <Router>
+      <div>
+        <Switch>
+          <Route exact path="/" render={renderHome}></Route>
+          <Route path="/room/:name" component={RoomInfo}></Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
 export default App;

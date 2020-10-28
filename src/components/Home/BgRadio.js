@@ -12,7 +12,6 @@ const bgAry = [
 ]
 
 const BgRadio = () => {
-    // const [bgImg, setBgImg] = useState();
     return (
         <div className="bgSelectBlock">
             {bgAry.map((bgAry, index)=>{
