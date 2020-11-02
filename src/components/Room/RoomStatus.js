@@ -1,17 +1,20 @@
 import React, { useEffect, useState} from 'react';
+import {DateRange} from 'react-date-range';
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css';
 
 // methods
-import {getRoomDes, getRoomDetial, getRoomAmenities} from './RoomFunction'
+import {getRoomDes, getRoomDetial, getRoomAmenities, getDateStr} from './RoomFunction'
 
 // import check icon
 import checkMarkIcon from '../../assets/icons/check-mark.svg'
 import crossMarkIcon from '../../assets/icons/cross-mark.svg'
 
-const RoomStatus = ({info, checkInAndOut}) => {
+const RoomStatus = ({info, checkInAndOut, selectDate, dateRange}) => {
     const roomDes =  getRoomDes(info.descriptionShort);
     const roomDetialList = getRoomDetial(info.description);
     const roomAmenities = getRoomAmenities(info.amenities);
-    console.log(roomAmenities);
+
     return (
         <div className="roomMain">
             <div className="roomStatusHeader">
@@ -39,6 +42,21 @@ const RoomStatus = ({info, checkInAndOut}) => {
                     )
                 })}
             </ul>
+        
+            <h2 className="roomSearchTitle">空房狀態查詢</h2>            
+            <div className="calendarBlock">
+                <DateRange
+                    months={2}
+                    direction="horizontal"
+                    showMonthAndYearPickers={false}
+                    showDateDisplay={false}
+                    ranges={dateRange}
+                    minDate={getDateStr(1)}
+                    maxDate={getDateStr(89)}
+                    rangeColors={['rgba(148, 156, 124, 0.8)']}
+                    onChange={selectDate}
+                />
+            </div>
         </div>
     );
 }

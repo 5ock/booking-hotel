@@ -11,6 +11,33 @@ import petsIcon from '../../assets/icons/pets.svg';
 import noSmokingIcon from '../../assets/icons/no-smoking.svg';
 import airConditionerIcon from '../../assets/icons/air-conditioner.svg';
 
+const calPriceAndNights = (info, selectDate) => {
+    if(info.length == 0) return {};
+
+    let night, price;
+    let holidays = 0;
+    let weekDayPrice = info.normalDayPrice;
+    let holidayPrice = info.holidayPrice;
+
+    night = selectDate[0].endDate.getDate() - selectDate[0].startDate.getDate();
+    for(let i=0; i<night; i++) {
+        let date = new Date(selectDate[0].startDate);
+        date.setDate(date.getDate() + i);
+        if(date.getDay() > 4) {
+            holidays++;
+        }        
+    }
+    price = (night - holidays) * weekDayPrice + holidays * holidayPrice;
+
+    return {night, price, holidays};
+};
+
+const getDateStr = (addDayCount) => {
+    let someDay = new Date();
+    someDay.setDate(someDay.getDate()+addDayCount);
+    return someDay;
+};
+
 const getRoomDetial = (str=>{
     if(!str) return [];
     
@@ -57,4 +84,4 @@ const getRoomAmenities = (obj=>{
     ];
 });
 
-export {getRoomDetial, getRoomDes, getRoomAmenities}
+export {getRoomDetial, getRoomDes, getRoomAmenities, getDateStr, calPriceAndNights}

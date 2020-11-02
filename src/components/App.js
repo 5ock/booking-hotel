@@ -6,8 +6,8 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import {apiGetAllRooms} from '../api'
 
 //page
-import Home from './Home/Home'
-import RoomInfo from './Room/RoomInfo'
+import Home from './Home/'
+import RoomInfo from './Room/'
 
 function App() {
   const header = {
@@ -32,7 +32,6 @@ function App() {
   }, []);
 
   const renderHome = () => {
-    // const {rooms} = roomsInfo;
     return <Home rooms={roomsInfo} />;
   }
 

@@ -14,10 +14,10 @@ const bgAry = [
 const BgRadio = () => {
     return (
         <div className="bgSelectBlock">
-            {bgAry.map((bgAry, index)=>{
+            {bgAry.map((bgObj, index)=>{
                 if(index==0) {
                     return (
-                        <label key={bgAry.key} className="label">
+                        <label key={bgObj.key} className="label">
                             <input 
                                 type="radio"
                                 name="bgImg"
@@ -25,17 +25,17 @@ const BgRadio = () => {
                                 defaultChecked
                             ></input>
                             <picture className="bgBlock">
-                                <img className="bgImg" src={bgAry.src}></img>
+                                <img className="bgImg" src={bgObj.src}></img>
                             </picture>
                             <div className="circle"></div>
                         </label>
                     )
                 } else {
                     return (
-                        <label key={bgAry.key} className="label">
+                        <label key={bgObj.key} className="label">
                             <input type="radio" name="bgImg" className="radio"></input>
                             <picture className="bgBlock">
-                                <img className="bgImg" src={bgAry.src}></img>
+                                <img className="bgImg" src={bgObj.src}></img>
                             </picture>
                             <div className="circle"></div>
                         </label>
