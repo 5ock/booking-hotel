@@ -120,6 +120,10 @@
     margin-bottom: 18px;
     background-color: transparent;
     color: #fff;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 .total {
     text-align: right;
