@@ -8,7 +8,7 @@ const Sidebar = () => {
     return (
         <header>
             <picture className="brandLogo">
-                <img src={BrandLogo}></img>
+                <img alt="" src={BrandLogo}></img>
             </picture>
             <h1 className="hotelName">好室旅店。House Hotel</h1>
             <div>

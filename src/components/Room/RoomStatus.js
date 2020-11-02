@@ -1,10 +1,10 @@
-import React, { useEffect, useState} from 'react';
+import React from 'react';
 import {DateRange} from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
 // methods
-import {getRoomDes, getRoomDetial, getRoomAmenities, getDateStr} from './RoomFunction'
+import {getRoomDes, getRoomDetial, getRoomAmenities, getDateStr} from '../../assets/js/RoomFunction'
 
 // import check icon
 import checkMarkIcon from '../../assets/icons/check-mark.svg'
@@ -36,8 +36,8 @@ const RoomStatus = ({info, checkInAndOut, selectDate, dateRange}) => {
                     
                     return (
                         <li key={path} className={liClassName}>
-                            <img src={path}></img>
-                            <img className="amenitiesStatus" src={imgSrc}></img>
+                            <img alt="" src={path}></img>
+                            <img alt="" className="amenitiesStatus" src={imgSrc}></img>
                         </li>
                     )
                 })}

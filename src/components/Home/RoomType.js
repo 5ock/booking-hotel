@@ -15,7 +15,7 @@ const HomeType = ({rooms}) => {
                 };
                 return (
                     <Link key={id} className='room' to={linkToObj}>
-                        <img className='imgWrap' src={imageUrl}></img>
+                        <img alt="" className='imgWrap' src={imageUrl}></img>
                         <span className='roomName'>{name}</span>
                     </Link>
                 )

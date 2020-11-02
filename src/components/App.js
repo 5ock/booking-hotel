@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/scss/index.scss';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 //api
 import {apiGetAllRooms} from '../api'
@@ -10,11 +10,6 @@ import Home from './Home/'
 import RoomInfo from './Room/'
 
 function App() {
-  const header = {
-    accept: 'appleication/json',
-    authorization: 'Bearer b6zWQKzrk8jw2OPPRAh1Gahua6k3MWRRj5FIBkKpQd6rnHFCM5T0E0HZlVyx'
-  }
-
   const [roomsInfo, setRoomsInfo] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -50,21 +45,3 @@ function App() {
 }
 
 export default App;
-
-
-
-// function Home() {
-//   return (
-//     <div>
-//       <h2>Home</h2>
-//     </div>
-//   );
-// }
-
-function About() {
-  return (
-    <div>
-      <h2>About</h2>
-    </div>
-  );
-}

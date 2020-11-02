@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import home_01 from '../../assets/imgs/home_01.jpg';
 import home_02 from '../../assets/imgs/home_02.jpg';
 import home_03 from '../../assets/imgs/home_03.jpg';
@@ -15,7 +15,7 @@ const BgRadio = () => {
     return (
         <div className="bgSelectBlock">
             {bgAry.map((bgObj, index)=>{
-                if(index==0) {
+                if(index===0) {
                     return (
                         <label key={bgObj.key} className="label">
                             <input 
@@ -25,7 +25,7 @@ const BgRadio = () => {
                                 defaultChecked
                             ></input>
                             <picture className="bgBlock">
-                                <img className="bgImg" src={bgObj.src}></img>
+                                <img alt="" className="bgImg" src={bgObj.src}></img>
                             </picture>
                             <div className="circle"></div>
                         </label>
@@ -35,7 +35,7 @@ const BgRadio = () => {
                         <label key={bgObj.key} className="label">
                             <input type="radio" name="bgImg" className="radio"></input>
                             <picture className="bgBlock">
-                                <img className="bgImg" src={bgObj.src}></img>
+                                <img alt="" className="bgImg" src={bgObj.src}></img>
                             </picture>
                             <div className="circle"></div>
                         </label>
