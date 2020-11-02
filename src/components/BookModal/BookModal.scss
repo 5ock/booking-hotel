@@ -1,0 +1,251 @@
+.bookModalBg {
+    color: rgb(56, 71, 11);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    min-width: 1366px;
+    min-height: 768px;
+}
+
+.bookModalContainer {
+    width: 1110px;
+    height: 602px;
+    background-color: white;
+    border: 1px solid rgb(56, 71, 11);
+    display: flex;
+}
+
+.closeButton {
+    background: url('../../assets/icons/cross.svg') no-repeat;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 30px;
+    right: 30px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+// book room sidebar
+.bookSidebar {
+    width: 320px;
+    color: white;
+    background-color: rgb(56, 71, 11);
+    padding: 50px 65px 0 65px;
+}
+.labelText {
+    // display: inline-block;
+    // font-family: "Noto Sans TC";
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 7px;
+}
+
+.label {
+    margin-bottom: 16px;
+    display: block;
+}
+
+
+.labelInput, .labelButton {
+    display: block;
+    width: 100%;
+    line-height: 38px;
+    color: rgb(106, 106, 106);
+    background-color: white;
+    text-align: left;
+    font-size: 16px;
+    padding: 0 10px;
+    max-height: 38px;
+    font-weight: 600;
+    border: 1px solid white;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.labelButton {
+    position: relative;
+}
+
+.labelButton::after {
+    content: "▾";
+    color: rgb(56, 71, 11);
+    font-size: 20px;
+    position: absolute;
+    right: 9px;
+    transform: translateY(-1px);
+}
+
+.datePicker {
+    position: absolute;
+    top: 408px;
+    left: 795px;
+    z-index: 1;
+
+    &.checkout {
+        top: 496px;
+    }
+}
+
+.rdrCalendarWrapper {
+    border: 1px solid #000;
+}
+.duration {
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(148, 156, 124);
+    padding-bottom: 14px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(148, 156, 124, 0.5);
+}
+
+.submitButton {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 600;
+    border: 1px solid white;
+    padding: 7.5px 0;
+    margin-bottom: 18px;
+    background-color: transparent;
+    color: #fff;
+}
+.total {
+    text-align: right;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.totalAmount {
+    text-align: right;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 20px;
+}
+
+// book room info
+.bookRoomInfo {
+    flex-grow: 1;
+    padding: 51px 30px 26px 30px;
+    position: relative;
+}
+
+.roomTypeHeading {
+    display: flex;
+    align-items: center;
+    max-width: 530px;
+    margin-bottom: 8px;
+}
+
+.roomType {
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 33px;
+    display: inline-block;
+}
+
+.hrLine {
+    margin-left: 6.5px;
+    flex-grow: 1;
+    height: 1px;
+    background-color: rgba(148, 156, 124, 0.2);
+    transform: translateY(2px);
+}
+
+.bookRoomDes p{
+    font-family: "Noto Sans TC";
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.bookAmenities {
+    display: flex;
+    max-width: 530px;
+    margin-bottom: 26px;
+
+    li {
+        flex-basis: 9%;
+        pointer-events: none;
+        user-select: none;
+        margin-top: 27px;
+        text-align: center;
+    }
+
+    img {
+        height: 48px;
+    }
+}
+
+
+.BookRoomRules {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 19px;
+    li {
+        font-family: "Noto Sans TC";
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 26px;
+    }
+}
+
+.steps {
+    display: flex;
+}
+
+.step {
+    width: 160px;
+    height: 136px;
+}
+
+.stepIcon {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.documentIconWrap {
+    background-color: rgb(148, 156, 124);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stepTextContainer {
+    height: 60px;
+    border: 1px solid rgb(148, 156, 124);
+    border-radius: 0px 0px 10px 10px;
+    padding: 12px 0 18px 0;
+
+    p {
+        font-family: "Noto Sans TC";
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 18px;
+        text-align: center;
+    }
+}
+
+.arrowWrap {
+    // background: url('../../../assets/icons/right-arrow.svg') no-repeat;
+    width: 31px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
