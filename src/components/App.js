@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../assets/scss/index.scss';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 //api
 import {apiGetAllRooms} from '../api'
@@ -33,14 +33,12 @@ function App() {
   if(loading) {return (<div>Loading...</div>)};
 
   return (
-    <Router>
-      <div>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" render={renderHome}></Route>
           <Route path="/room/:name" component={RoomInfo}></Route>
         </Switch>
-      </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
