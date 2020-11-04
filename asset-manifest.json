@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/booking-hotel/static/css/main.e78db26b.chunk.css",
-    "main.js": "/booking-hotel/static/js/main.52c1c4e9.chunk.js",
-    "main.js.map": "/booking-hotel/static/js/main.52c1c4e9.chunk.js.map",
+    "main.js": "/booking-hotel/static/js/main.4be8ef8f.chunk.js",
+    "main.js.map": "/booking-hotel/static/js/main.4be8ef8f.chunk.js.map",
     "runtime-main.js": "/booking-hotel/static/js/runtime-main.78dd2460.js",
     "runtime-main.js.map": "/booking-hotel/static/js/runtime-main.78dd2460.js.map",
     "static/css/2.a3735241.chunk.css": "/booking-hotel/static/css/2.a3735241.chunk.css",
-    "static/js/2.998c56f4.chunk.js": "/booking-hotel/static/js/2.998c56f4.chunk.js",
-    "static/js/2.998c56f4.chunk.js.map": "/booking-hotel/static/js/2.998c56f4.chunk.js.map",
+    "static/js/2.239ecfe2.chunk.js": "/booking-hotel/static/js/2.239ecfe2.chunk.js",
+    "static/js/2.239ecfe2.chunk.js.map": "/booking-hotel/static/js/2.239ecfe2.chunk.js.map",
     "index.html": "/booking-hotel/index.html",
-    "precache-manifest.39b476d759edd48d3da375f034dbc829.js": "/booking-hotel/precache-manifest.39b476d759edd48d3da375f034dbc829.js",
+    "precache-manifest.241b55f0f4a4fd45cc23cb0f174da586.js": "/booking-hotel/precache-manifest.241b55f0f4a4fd45cc23cb0f174da586.js",
     "service-worker.js": "/booking-hotel/service-worker.js",
     "static/css/2.a3735241.chunk.css.map": "/booking-hotel/static/css/2.a3735241.chunk.css.map",
     "static/css/main.e78db26b.chunk.css.map": "/booking-hotel/static/css/main.e78db26b.chunk.css.map",
-    "static/js/2.998c56f4.chunk.js.LICENSE.txt": "/booking-hotel/static/js/2.998c56f4.chunk.js.LICENSE.txt",
+    "static/js/2.239ecfe2.chunk.js.LICENSE.txt": "/booking-hotel/static/js/2.239ecfe2.chunk.js.LICENSE.txt",
     "static/media/air-conditioner.svg": "/booking-hotel/static/media/air-conditioner.44d3ea03.svg",
     "static/media/breakfast.svg": "/booking-hotel/static/media/breakfast.3fde7209.svg",
     "static/media/check-mark.svg": "/booking-hotel/static/media/check-mark.380c9d2d.svg",
@@ -45,8 +45,8 @@
   "entrypoints": [
     "static/js/runtime-main.78dd2460.js",
     "static/css/2.a3735241.chunk.css",
-    "static/js/2.998c56f4.chunk.js",
+    "static/js/2.239ecfe2.chunk.js",
     "static/css/main.e78db26b.chunk.css",
-    "static/js/main.52c1c4e9.chunk.js"
+    "static/js/main.4be8ef8f.chunk.js"
   ]
 }
